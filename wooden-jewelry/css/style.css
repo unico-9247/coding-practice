@@ -1,0 +1,91 @@
+/* bodyの余白をなくす */
+body {
+  padding: 0px;
+  margin: 0px;
+}
+
+.containar {
+  max-width: 1400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+p {
+  font-size: 16px;
+}
+
+.main-visual {
+  width: 90vw;
+  text-align: center;
+}
+
+.logo {
+  width: 110px;
+}
+
+nav {
+  display: flex;
+  width: 90vw;
+  padding-left: 60px;
+}
+
+/* ulにflexboxを指定。「・」部分の余白をなくす */
+nav > ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  list-style: none; /* liの「・」の表示をなくす */
+}
+
+li a {
+  padding-top: 20px;
+  padding-left: 40px;
+  text-decoration: none;
+}
+
+main {
+  width: 1000px;
+}
+
+#concept, #work {
+  display: flex;
+}
+
+div[class^="content"] {
+  width: 482px;
+  height: 482px;
+}
+
+.content-text {
+  padding: 33px;
+  text-align: left;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  width: 1000px;
+  padding: 50px;
+}
+
+/* 横幅が767pxまでの場合（レスポンシブ） */
+@media (max-width: 767px) {
+
+  #concept {
+    flex-direction: column;
+    width: 90vw;
+  }
+
+  #work {
+    flex-direction: column-reverse;
+  }
+
+}
