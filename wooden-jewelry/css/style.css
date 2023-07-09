@@ -2,6 +2,8 @@
 body {
   padding: 0px;
   margin: 0px;
+  font-family: 'Crimson Text', serif;
+  font-family: 'Noto Sans JP', sans-serif;
 }
 
 .containar {
@@ -12,6 +14,7 @@ body {
 
 img {
   max-width: 100%;
+  height: auto;
 }
 
 h2 {
@@ -46,13 +49,13 @@ nav > ul {
 }
 
 li a {
-  padding-top: 20px;
   padding-left: 40px;
   text-decoration: none;
 }
 
 main {
   width: 1000px;
+  margin: 0 auto;
 }
 
 #concept, #work {
@@ -74,14 +77,37 @@ footer {
   justify-content: space-between;
   width: 1000px;
   padding: 50px;
+  margin: 0 auto;
 }
 
 /* 横幅が767pxまでの場合（レスポンシブ） */
-@media (max-width: 767px) {
+@media screen and (max-width: 767px) {
+
+  .main-visual {
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+  }
+
+  header {
+    width: 100%;
+
+  }
+
+  .content-img {
+    width: 100%;
+  }
+
+  .content-text {
+    width: 100%;
+  }
+
+  footer {
+    width: 100%;
+  }
 
   #concept {
     flex-direction: column;
-    width: 90vw;
   }
 
   #work {
