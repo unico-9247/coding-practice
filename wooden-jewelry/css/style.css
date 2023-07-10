@@ -51,6 +51,7 @@ nav > ul {
 li a {
   padding-left: 40px;
   text-decoration: none;
+  color: #2d2d2d;
 }
 
 main {
@@ -91,7 +92,6 @@ footer {
 
   header {
     width: 100%;
-
   }
 
   .content-img {
