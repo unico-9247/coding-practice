@@ -1,0 +1,217 @@
+@charset "UTF-8";
+
+html {
+  font-size: 100%;
+}
+
+
+img {
+  width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+.container {
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
+.wrapper {
+  max-width: 960px;
+  padding-right: 4%;
+  padding-left: 4%;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  margin-bottom: 50px;
+
+}
+
+h1 img {
+  max-width: 120px;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+}
+
+.nav-menu__item {
+  color: #24292E;
+  font-size: 14.4px;
+}
+
+.nav-menu__item a {
+  color: #24292E;
+  text-decoration: none;
+}
+
+.nav-menu__item a:hover {
+  color: #24292E;
+}
+
+
+.sns-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.nav-menu__item + .nav-menu__item {
+  margin-left: 5vw;
+}
+
+/* メインビジュアル */
+.main-visual {
+  width: 100vw;
+  margin: 0 calc(50% - 50vw);
+}
+
+.main-visual img {
+  object-fit: cover;
+  height: 420px;
+}
+
+/* セクションタイトル */
+.section-title {
+  font-size: 24px;
+  text-align: center;
+  padding-top: 80px;
+  padding-bottom: 40px;
+}
+
+/* About */
+.profile-information {
+  margin-top: 20px;
+}
+
+.profile-text {
+  margin-top: 20px;
+}
+
+/* Works */
+.works-images {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.works-images img {
+  width: 30%;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+/* News */
+.news-table {
+  width: 100%;
+}
+
+.news-header {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: solid 1px #808080;
+}
+
+.news-cell {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 40px;
+  border-bottom: 1px solid #808080;
+}
+
+.news-firstline {
+  border-top: 1px solid #808080;
+}
+
+/* Contact */
+.contact__flex {
+  display: flex;
+  flex-direction: row;
+}
+
+.contact-heading {
+  width: 100px;
+  height: 40px;
+  margin-right: 4%;
+}
+
+.contact-text input {
+  width: 100%;
+}
+
+.contact-text textarea {
+  width: 100%;
+  height: 4rem;
+}
+
+.submit-container {
+  text-align: center;
+}
+
+.submit {
+  background: #24292E;
+  color: #FFFFFF;
+  font-size: 14.4px;
+  padding: 10px 90px;
+  margin-top: 40px;
+}
+
+.submit:hover {
+  background: #fff;
+  color: #24292E;
+}
+
+/* フッター */
+.footer-text {
+  width: 100vw;
+  margin: 60px calc(50% - 50vw) 0;
+  text-align: center;
+  background: #24292E;
+  color: #FFFFFF;
+  font-size: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/* 横幅が600pxまでの場合（レスポンシブ） */
+@media screen and (max-width: 600px) {
+
+  .page-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav-menu__item {
+    margin: 20px auto;
+  }  
+
+  /* Works */
+  .works-images {
+    flex-direction: column;
+  }
+
+  .works-images img {
+    width: 100%;
+  }
+
+  /* News */
+  .news-table tr {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contact__flex {
+    flex-direction: column;
+  }
+
+  .contact-heading {
+    width: auto;
+    height: auto;
+    margin: 20px 0 5px 0;
+  }
+
+
+}
