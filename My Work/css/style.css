@@ -4,20 +4,30 @@ html {
   font-size: 100%;
 }
 
-
 img {
   width: 100%;
   height: auto;
   vertical-align: bottom;
 }
 
+/* 文字サイズ */
+.nav-menu__item,
+p,
+.news-header,
+.news-cell,
+.contact-heading label {
+  color: #24292E;
+  font-size: 14.4px;
+}
+
 .container {
-  max-width: 1040px;
+  max-width: 1280px;
   margin: 0 auto;
 }
 
 .wrapper {
   max-width: 960px;
+  margin: 0 auto;
   padding-right: 4%;
   padding-left: 4%;
 }
@@ -39,20 +49,16 @@ h1 img {
   align-items: center;
 }
 
-.nav-menu__item {
-  color: #24292E;
-  font-size: 14.4px;
-}
-
 .nav-menu__item a {
   color: #24292E;
   text-decoration: none;
+  display: inline-block;
+  line-height: 1;
 }
 
 .nav-menu__item a:hover {
   color: #24292E;
 }
-
 
 .sns-icon {
   width: 20px;
@@ -132,14 +138,24 @@ h1 img {
   flex-direction: row;
 }
 
+.contact__flex + .contact__flex {
+  margin-top: 20px;
+}
+
 .contact-heading {
-  width: 100px;
-  height: 40px;
+  display: inline-block;
+  width: 15%;
   margin-right: 4%;
+}
+
+.contact-text {
+  display: inline-block;
+  width: 85%;
 }
 
 .contact-text input {
   width: 100%;
+  height: 1.5rem;
 }
 
 .contact-text textarea {
@@ -203,6 +219,11 @@ h1 img {
     flex-direction: column;
   }
 
+  .news-header .news-cell {
+    text-align: left;
+  }
+
+  /* Contact */
   .contact__flex {
     flex-direction: column;
   }
@@ -212,5 +233,9 @@ h1 img {
     height: auto;
     margin: 20px 0 5px 0;
   }
+
+  .contact-text {
+  width: 100%;
+}
 
 }
