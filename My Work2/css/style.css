@@ -49,12 +49,29 @@ h1 img {
   margin-left: 8%;
 }
 
-nav {
+.nav {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 .menu {
   display: flex;
+  align-items: center;
 }
+
+/* メインビジュアル */
+.mainvisual {
+  width: 100vw;
+  margin: 0 calc(50% - 50vw);
+}
+
+.mainvisual img {
+  height: 420px;
+  object-fit: cover;
+}
+
+/* About */
 
