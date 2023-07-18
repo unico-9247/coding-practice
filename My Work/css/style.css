@@ -37,7 +37,7 @@ p,
   justify-content: space-between;
   margin-top: 50px;
   margin-bottom: 50px;
-
+  align-items: center;
 }
 
 h1 img {
@@ -115,21 +115,23 @@ h1 img {
   width: 100%;
 }
 
+.news-table tr { /* trに枠線の装飾をする */
+  border-top: 1px solid #808080;
+}
+
+.news-table tr:last-child {
+  border-bottom: 1px solid #808080;
+}
+
 .news-header {
   padding-top: 20px;
   padding-bottom: 20px;
-  border-bottom: solid 1px #808080;
 }
 
 .news-cell {
   padding-top: 20px;
   padding-bottom: 20px;
   padding-left: 40px;
-  border-bottom: 1px solid #808080;
-}
-
-.news-firstline {
-  border-top: 1px solid #808080;
 }
 
 /* News2のセクションの装飾 */
@@ -246,6 +248,18 @@ h1 img {
 
   .news-header .news-cell {
     text-align: left;
+  }
+
+  .news-header {
+    padding-bottom: 0;
+    text-align: left;
+  }
+
+  .news-cell {
+    padding-top: 0;
+    padding-left: 0;
+    margin-top: 5px;
+  
   }
 
   /* News2のセクションの装飾 */

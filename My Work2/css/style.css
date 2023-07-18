@@ -1,0 +1,60 @@
+@charset "UTF-8";
+
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: 'Courier New', Courier, monospace;
+  line-height: 1.0;
+  color: #24292E;
+  /* 後ほどGoogle Fontsを読み込み */
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.wrapper {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 4%;
+}
+
+.menu__content {
+  font-size: 14.4px;
+}
+
+/* ヘッダー */
+h1 img {
+  max-width: 120px;
+}
+
+.menu__content  {
+  list-style: none;
+}
+
+.menu__content + .menu__content {
+  margin-left: 8%;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu {
+  display: flex;
+}
+
