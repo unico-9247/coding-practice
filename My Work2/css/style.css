@@ -5,7 +5,6 @@ html {
 }
 
 body {
-  font-family: 'Courier New', Courier, monospace;
   line-height: 1.0;
   color: #24292E;
   /* 後ほどGoogle Fontsを読み込み */
@@ -32,8 +31,15 @@ img {
   padding: 0 4%;
 }
 
-.menu__content {
+.menu__content,
+.about__list {
   font-size: 14.4px;
+}
+
+h2 {
+  font-size: 24px;
+  margin: 70px auto;
+  text-align: center;
 }
 
 /* ヘッダー */
@@ -74,4 +80,45 @@ h1 img {
 }
 
 /* About */
+.about__content {
+  margin-top: 20px;
+  line-height: 1.2;
+}
 
+/* Works */
+.works-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.works-flex img {
+  width: 30%;
+}
+
+.works-flex img {
+  margin-top: 30px;
+}
+
+/* News */
+.news-tr {
+  border-top: 1px solid #808080;
+}
+
+/* レスポンシブ */
+@media screen and (max-width: 600px) {
+  .nav {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .works-flex {
+    flex-direction: column;
+  }
+
+  .works-flex img {
+    width: 100%;
+    height: auto;
+  }
+
+}
