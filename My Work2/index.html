@@ -13,15 +13,15 @@
 
 <body>
   <div class="container">
-    <header>
-      <nav class="nav wrapper">
-        <h1><a href="index.html"><img src="images/logo.svg" alt="logo"></a></h1>
+    <header class="page-header">
+      <h1><a href="index.html"><img src="images/logo.svg" alt="My Work"></a></h1>
+      <nav>
         <ul class="menu">
           <li class="menu__content"><a href="#about">About</a></li>
-          <li class="menu__content"><a href="#about">About</a></li>
-          <li class="menu__content"><a href="#about">About</a></li>
-          <li class="menu__content"><a href="#about">About</a></li>
-          <li class="menu__content"><a href="#about">About</a></li>
+          <li class="menu__content"><a href="#works">Works</a></li>
+          <li class="menu__content"><a href="#News">News</a></li>
+          <li class="menu__content"><a href="#contact">Contact</a></li>
+          <li class="menu__content"><a href="https://www.instagram.com/"><img src="images/icon-instagram.png" alt="Instagram"></a></li>
         </ul>
       </nav>
     </header>
@@ -29,11 +29,12 @@
     <!-- メインビジュアル -->
     <main>
       <div class="mainvisual">
-        <img src="images/mainvisual-pc.jpg" alt="mainvisual">
+        <picture>
+          <source media="(max-width: 600px)" srcset="images/mainvisual-sp.jpg" class="mainvisual-sp">
+          <img src="images/mainvisual-pc.jpg" alt="Mainvisual"  class="mainvisual-pc">
+        </picture>
       </div>
-    </main>
 
-    <div class="wrapper">
       <!-- About -->
       <section id="about">
         <h2 class="section-title">About</h2>
@@ -56,42 +57,140 @@
           <img src="images/works6.jpg" alt="works6">
         </div>
       </section>
-      
-      <!-- News -->
+
+      <!-- Works2 -->
+      <section id="works2">
+        <h2 class="section-title">Works2</h2>
+        <div class="works2-flex">
+          <img src="images/works1.jpg" alt="works1">
+          <img src="images/works2.jpg" alt="works2">
+          <img src="images/works3.jpg" alt="works3">
+          <img src="images/works4.jpg" alt="works4">
+          <img src="images/works5.jpg" alt="works5">
+          <img src="images/works6.jpg" alt="works6">
+        </div>
+      </section>
+
+      <!-- Works3 -->
+      <section id="works3">
+        <h2 class="section-title">Works3</h2>
+        <div class="works3-flex">
+          <img src="images/works1.jpg" alt="works1">
+          <img src="images/works2.jpg" alt="works2">
+          <img src="images/works3.jpg" alt="works3">
+          <img src="images/works4.jpg" alt="works4">
+          <img src="images/works5.jpg" alt="works5">
+          <img src="images/works6.jpg" alt="works6">
+        </div>
+      </section>
+
+      <!-- News1 -->
       <section id="news">
-        <h2 class="section-title">News</h2>
+        <h2 class="section-title">News1</h2>
         <table class="news-table">
           <tr class="news-tr">
             <th class="news-date">2020.XX.XX</th>
-            <td class="news-content">デザイン雑誌「ＸＸＸＸＸＸ Vol.11』に掲載していただきました。</td>
+            <td class="news-content">デザイン雑誌「ＸＸＸＸＸＸ Vol.11』に掲載していただきました。デザイン雑誌「ＸＸＸＸＸＸ Vol.12』に掲載していただきました。</td>
           </tr>
           <tr class="news-tr">
             <th class="news-date">2020.XX.XX</th>
-            <td class="news-content">デザイン雑誌「ＸＸＸＸＸＸ Vol.11』に掲載していただきました。</td>
+            <td class="news-content">ＸＸ月ＸＸ日から写真集「ＸＸＸＸＸＸＸ」の販売を開始します。</td>
           </tr>
           <tr class="news-tr">
-            <th class="news-date">2020.XX.XX</th>
-            <td class="news-content">デザイン雑誌「ＸＸＸＸＸＸ Vol.11』に掲載していただきました。</td>
+            <th class="news-date">2019.XX.XX</th>
+            <td class="news-content">【イベント開催のお知らせ】テキストテキストテキストテキストテキストテキストテキスト</td>
           </tr>
           <tr class="news-tr">
-            <th class="news-date">2020.XX.XX</th>
-            <td class="news-content">デザイン雑誌「ＸＸＸＸＸＸ Vol.11』に掲載していただきました。</td>
+            <th class="news-date">2019.XX.XX</th>
+            <td class="news-content">デザイン雑誌「ＸＸＸＸＸＸ Vol.10』に掲載していただきました。</td>
           </tr>
           <tr class="news-tr">
-            <th class="news-date">2020.XX.XX</th>
-            <td class="news-content">デザイン雑誌「ＸＸＸＸＸＸ Vol.11』に掲載していただきました。</td>
+            <th class="news-date">2019.XX.XX</th>
+            <td class="news-content">【個展開催のお知らせ】テキストテキストテキストテキストテキストテキストテキスト</td>
           </tr>
         </table>
       </section>
 
+  <!-- News2 遷移先も設定-->
+  <section id="news2">
+    <h2 class="section-title">News2</h2>
+    <ul class="news-list">
+      <li class="news-item">
+        <a href="#">
+          <p class="news-heading">2020.XX.XX</p>
+          <p class="news-title">デザイン雑誌「ＸＸＸＸＸＸ Vol.11』に掲載していただきました。デザイン雑誌「ＸＸＸＸＸＸ Vol.12』に掲載していただきました。</p>
+        </a>
+      </li>
+      <li class="news-item">
+        <a href="#">
+          <p class="news-heading">2020.XX.XX</p>
+          <p class="news-title">ＸＸ月ＸＸ日から写真集「ＸＸＸＸＸＸＸ」の販売を開始します。</p>
+        </a>
+      </li>
+      <li class="news-item">
+        <a href="#">
+          <p class="news-heading">2019.XX.XX</p>
+          <p class="news-title">【イベント開催のお知らせ】テキストテキストテキストテキストテキストテキストテキスト</p>
+        </a>
+      </li>
+      <li class="news-item">
+        <a href="#">
+          <p class="news-heading">2019.XX.XX</p>
+          <p class="news-title">デザイン雑誌「ＸＸＸＸＸＸ Vol.10』に掲載していただきました。</p>
+        </a>
+      </li>
+      <li class="news-item">
+        <a href="#">
+          <p class="news-heading">2019.XX.XX</p>
+          <p class="news-title">【個展開催のお知らせ】テキストテキストテキストテキストテキストテキストテキスト</p>
+        </a>
+      </li>
+    </ul>
+  </section>
+
       <!-- Contact -->
       <section id="contact">
         <h2 class="section-title">Contact</h2>
+        <form class="form">
+          <div class="form__flex">
+            <div class="form__heading">
+              <label for="name">NAME</label>
+            </div>
+            <div class="form__text">
+              <input type="text" placeholder="日本 太郎">
+            </div>
+          </div>
+          <div class="form__flex">
+            <div class="form__heading">
+              <label for="name">E-mail</label>
+            </div>
+            <div class="form__text">
+              <input type="e-mail" placeholder="xxxxx@example.com">
+            </div>
+          </div>
+          <div class="form__flex">
+            <div class="form__heading">
+              <label for="name">MESSAGE</label>
+            </div>
+            <div class="form__text">
+              <textarea name="message" placeholder="ここにメッセージを入力"></textarea>
+            </div>
+          </div>
+          <div class="submit__button">
+            <input type="submit" value="送信" class="submit__text">
+          </div>
+        </form>
       </section>
-    </div>
+    </main>
+
+    <!-- フッター -->
+    <footer>
+      <div class="footer__box">
+        <span class="footer__text">&copy;2020 My Work</span>
+      </div>
+    </footer>
 
   </div>
-
   
 </body>
 </html>

@@ -12,6 +12,7 @@ body {
 
 a {
   text-decoration: none;
+  color: #24292E;
 }
 
 img {
@@ -21,25 +22,26 @@ img {
 }
 
 .container {
-  max-width: 1280px;
-  margin: 0 auto;
-}
-
-.wrapper {
   max-width: 960px;
   margin: 0 auto;
   padding: 0 4%;
 }
 
 .menu__content,
-.about__list {
-  font-size: 14.4px;
+.about__list, .news-date, .news-content,
+.form__heading, p {
+  font-size: 0.9rem;
+  font-weight: normal;
 }
 
 h2 {
   font-size: 24px;
   margin: 70px auto;
   text-align: center;
+}
+
+.footer__text {
+  font-size: 0.6rem;
 }
 
 /* ヘッダー */
@@ -51,11 +53,16 @@ h1 img {
   list-style: none;
 }
 
-.menu__content + .menu__content {
-  margin-left: 8%;
+.menu__content img {
+  width: 20px;
+  height: 20px;
 }
 
-.nav {
+.menu__content + .menu__content {
+  margin-left: 5vw;
+}
+
+.page-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -74,7 +81,7 @@ h1 img {
   margin: 0 calc(50% - 50vw);
 }
 
-.mainvisual img {
+.mainvisual-sp, .mainvisual-pc {
   height: 420px;
   object-fit: cover;
 }
@@ -90,14 +97,41 @@ h1 img {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin-top: -20px; /* img{margin-top}で出来た、タイトルと画像間の余分な余白を無くす */
 }
 
 .works-flex img {
-  width: 30%;
+  width: 31%;
 }
 
 .works-flex img {
-  margin-top: 30px;
+  margin-top: 20px;
+}
+
+/* Works2 */
+.works2-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.works2-flex img {
+  width: calc((100% - 30px) / 3); /* 画像間の余白15pxが2つ分 */
+}
+
+/* Works3 */
+.works3-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.works3-flex img {
+  width: calc((100% - 40px) / 3);  /* 画像間の余白20pxが2つ分 */
+}
+
+.works3-flex img:nth-child(n + 4) {
+  margin-top: 20px;
 }
 
 /* News */
@@ -105,20 +139,178 @@ h1 img {
   border-top: 1px solid #808080;
 }
 
+.news-tr:last-child {
+  border-bottom: 1px solid #808080;
+}
+
+.news-date, .news-content {
+  padding: 20px 0;
+  vertical-align: middle;
+}
+
+.news-content {
+  padding-left: calc((90/960) * 100%);
+  width: 100%;
+}
+
+/* News2のセクションの装飾 */
+.news-list {
+  width: 100%;
+}
+
+.news-item a {
+  display: flex;
+  text-decoration: none;
+}
+
+.news-item {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #808080;
+}
+
+.news-item:first-child {
+  border-top: 1px solid #808080;
+}
+
+.news-heading {
+  padding-left: 20px;
+  padding-right: 60px;
+}
+
+/* Contact */
+.form__flex {
+  display: flex;
+  align-items: center;
+}
+
+.form__flex + .form__flex {
+  margin-top: 20px;
+}
+
+.form__heading {
+  display: inline-block;
+  width: 15%;
+}
+
+.form__text {
+  width: 100%;
+  margin-left: 70px;
+}
+
+.form__text input {
+  width: 100%;
+  height: 1.5rem;
+  padding: 5px;
+}
+
+.form__text textarea {
+  width: 100%;
+  height: 4rem;
+  padding: 5px;
+}
+
+.submit__button {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.submit__text {
+  background: #24292E;
+  color: #FFFFFF;
+  padding: 15px 90px;
+}
+
+.submit__text:hover {
+  background: #fff;
+  color: #24292E;
+}
+
+/* フッター */
+.footer__box {
+  background: #24292E;
+  color: #FFFFFF;
+  padding: 10px;
+  margin: 100px calc(50% - 50vw) 0;
+  text-align: center;
+}
+
+
 /* レスポンシブ */
 @media screen and (max-width: 600px) {
-  .nav {
+  .page-header{
     display: flex;
     flex-direction: column;
   }
 
-  .works-flex {
+  h1 {
+    padding-top: 20px;
+    padding-bottom: 40px;
+  }
+
+  /* Works1〜3 */
+  .works-flex, .works2-flex, .works3-flex {
     flex-direction: column;
   }
 
-  .works-flex img {
+  .works-flex img, .works2-flex img, .works3-flex img {
     width: 100%;
     height: auto;
+  }
+
+  /* Works3 */
+  .works3-flex img:nth-child(2)  {
+    margin-top: 20px;
+  }
+
+  .works3-flex img:nth-child(3)  {
+    margin-top: 20px;
+  }
+
+  /* News */
+  .news-tr {
+    display: flex;
+    flex-direction: column;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  .news-date {
+    padding: 0;
+    text-align: left;
+    margin-bottom: 5px;
+  }
+  
+  .news-content {
+    padding: 0;
+    text-align-last: left;
+  }
+
+  /* News2のセクションの装飾 */
+  .news-item a {
+    flex-direction: column;
+  }
+
+  .news-heading {
+    padding: 0;
+    margin-bottom: 5px;
+  }  
+
+  /* Contact */
+  .form__flex {
+    flex-direction: column;
+  }
+
+  .form__heading {
+    width: auto;
+    height: auto;
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+
+  .form__text {
+    margin-left: 0;
+    margin-right: 4vw;
   }
 
 }
