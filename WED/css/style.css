@@ -1,2 +1,79 @@
 @charset "UTF-8";
 
+/* 全体 */
+html {
+  font-size: 100%;
+}
+
+body {
+  /* Google Fontsを読み込むならここ */
+  line-height: 1.0;
+  color: #000000;
+  font-size: 0.875rem;
+}
+
+img {
+  max-width: 100px;
+  height: auto;
+  vertical-align: bottom;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 4%;
+}
+
+/* ヘッダー */
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 100px;
+}
+
+.menu__list {
+  text-transform: uppercase;
+  margin-left: 4vw;
+}
+
+.header__box1 {
+  display: flex;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+}
+
+.header__box2 {
+  padding: 30px 50px;
+  color: #fff;
+  background: #000;
+  font-size: 0.75rem;
+}
+
+@media screen and (max-width: 900px) {
+  .header__box1 {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  h1 {
+    padding: 4%;
+  }
+  
+  .header__box2 {
+    display: none;
+  }
+
+
+}
+
