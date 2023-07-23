@@ -181,6 +181,7 @@ h1 img {
 /* Contact */
 .form__flex {
   display: flex;
+  align-items: center;
 }
 
 .form__flex + .form__flex {
@@ -298,6 +299,7 @@ h1 img {
   /* Contact */
   .form__flex {
     flex-direction: column;
+    align-items: stretch;
   }
 
   .form__heading {
