@@ -2,18 +2,20 @@
 
 /* 全体 */
 html {
-  font-size: 100%;
+   /* ベースフォントを10pxにする（デフォルトは16px） */
+  font-size: 62.5%;
 }
 
 body {
   /* Google Fontsを読み込むならここ */
-  line-height: 1.0;
+  line-height: 1.5;
   color: #000000;
-  font-size: 0.875rem;
+  /* サイト全体の文字サイズを14pxにする */
+  font-size: 1.4rem;
 }
 
 img {
-  max-width: 100px;
+  max-width: 100%;
   height: auto;
   vertical-align: bottom;
 }
@@ -37,6 +39,9 @@ a {
   background-color: #fff;
 }
 
+.wrapper {
+  padding: 30px 8vw;
+}
 
 /* ヘッダー */
 .header {
@@ -66,30 +71,95 @@ a {
   padding: 30px 50px;
   color: #fff;
   background: #000;
-  font-size: 0.75rem;
+  font-size: 1.2rem;
 }
 
 /* メインビジュアル */
+/* うまく広がらない！！ */
 .main-visual {
   margin: 0 calc(50% - 50vw);
   width: 100%;
 }
 
-  /* フッター */
-  .footer {
-    background-color: #fff;
-  }
+/* セクション全体 */
+.section__title {
+  font-size: 3.6rem;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 1.0rem;
+}
 
-  .footer__flex {
-    display: flex;
-    justify-content: space-between;
-    padding: 30px 8vw;
-  }
+.section__subtitle {
+  font-weight: normal;
+  margin-top: 15px;
+}
 
-  .copyright {
-    font-size: 0.75rem;
-    padding-left: 8vw;
-  }
+section + section {
+  margin-top: 70px;
+}
+
+/* ABOUT */
+.about__flex {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.about__box1 {
+  width: 100%;
+}
+
+.about__box2 {
+/* うまく広がらない！ */
+  margin-left: 0 calc(50% - 50vw);
+}
+
+.about__text {
+  margin-top: 20px;
+}
+
+/* BUSINESS */
+.business__flex {
+  display: flex;
+}
+
+.business__box1, .business__box2 {
+  margin: 0 30px;
+}
+
+.business__box1 {
+  margin-top: 50px;
+}
+
+.business__img {
+  width: 30vw;
+  margin-top: 30px;
+}
+
+.businessimg__title {
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+
+.businessimg__title::before {
+  font-weight: normal;
+  content: "- ";
+  color: #000;
+}
+
+/* フッター */
+.footer {
+  background-color: #fff;
+}
+
+.footer__flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.copyright {
+  font-size: 0.75rem;
+  padding-left: 8vw;
+}
 
 
 /* レスポンシブ */
@@ -106,6 +176,25 @@ a {
   .header__box2 {
     display: none;
   }
+
+  /* ABOUT */
+  .about__flex {
+    flex-direction: column-reverse;
+  }
+
+  /* BUSINESS */
+  .business__flex {
+    flex-direction: column;
+  }
+
+  .business__img {
+    width: 100%;
+  }
+
+  .business__box1, .business__box2 {
+    margin: 0;
+  }
+  
 
   /* フッター */
   .footer__flex {

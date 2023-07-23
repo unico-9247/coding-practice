@@ -181,7 +181,6 @@ h1 img {
 /* Contact */
 .form__flex {
   display: flex;
-  align-items: center;
 }
 
 .form__flex + .form__flex {
