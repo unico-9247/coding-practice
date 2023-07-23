@@ -12,6 +12,7 @@ body {
   color: #000000;
   /* サイト全体の文字サイズを14pxにする */
   font-size: 1.4rem;
+  background-color: #F0F0F0;
 }
 
 img {
@@ -40,7 +41,7 @@ a {
 }
 
 .wrapper {
-  padding: 30px 8vw;
+  padding: 30px;
 }
 
 /* ヘッダー */
@@ -96,6 +97,34 @@ a {
 
 section + section {
   margin-top: 70px;
+}
+
+/* NEWS */
+.news__list {
+  display: flex;
+}
+
+.news__content + .news__content {
+  padding-left: calc((15/1000) * 100%);
+  margin-left: calc((55/1000) * 100%);
+  border-left: 2px solid #87888e;
+}
+
+.news__date {
+  font-size: 1.4rem;
+}
+
+.news__span {
+  font-size: 1.2rem;
+  background: #000;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 4px;
+}
+
+.news__text {
+  font-size: 1.6rem;
+  margin-top: 5px;
 }
 
 /* ABOUT */
@@ -176,6 +205,18 @@ section + section {
   .header__box2 {
     display: none;
   }
+
+  /* NEWS */
+  .news__list {
+    flex-direction: column;
+  }
+
+  .news__content + .news__content {
+    padding: 0;
+    margin: 20px 0 0 0;
+    border: none;
+  }
+  
 
   /* ABOUT */
   .about__flex {
