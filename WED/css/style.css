@@ -8,7 +8,7 @@ html {
 
 body {
   /* Google Fontsを読み込むならここ */
-  line-height: 1.5;
+  line-height: 2.0;
   color: #000000;
   /* サイト全体の文字サイズを14pxにする */
   font-size: 1.4rem;
@@ -48,10 +48,13 @@ a {
 .header {
   display: flex;
   justify-content: space-between;
+  margin: 0 calc(50% - 50vw);
+  width: 100vw;
 }
 
 .logo {
   width: 100px;
+  margin-left: 4vw;
 }
 
 .menu__list {
@@ -76,10 +79,9 @@ a {
 }
 
 /* メインビジュアル */
-/* うまく広がらない！！ */
 .main-visual {
   margin: 0 calc(50% - 50vw);
-  width: 100%;
+  width: 100vw;
 }
 
 /* セクション全体 */
@@ -131,15 +133,18 @@ section + section {
 .about__flex {
   display: flex;
   flex-direction: row-reverse;
+  justify-content: space-between;
 }
 
 .about__box1 {
-  width: 100%;
+  margin: 0 calc(50% - 50vw);
+  width: 40vw;
+  padding: 100px 3vw 0;
 }
 
 .about__box2 {
-/* うまく広がらない！ */
-  margin-left: 0 calc(50% - 50vw);
+  margin: 0 calc(50% - 50vw);
+  width: 55vw;
 }
 
 .about__text {
@@ -149,6 +154,8 @@ section + section {
 /* BUSINESS */
 .business__flex {
   display: flex;
+  justify-content: space-between;
+  padding: 0 10%;
 }
 
 .business__box1, .business__box2 {
@@ -173,6 +180,43 @@ section + section {
   font-weight: normal;
   content: "- ";
   color: #000;
+}
+
+/* COMPANY */
+/* フッターがcompanyのセクションに被ってしまう */
+.company__wrapper {
+  display: flex;
+  position: relative;  
+}
+
+.company__box {
+  background: #fff;
+  padding: 50px 8% 50px 6%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 55%;
+}
+
+.company__heading {
+  text-align: left;
+  width: 60px;
+}
+
+.company__data {
+  padding-left: 3vw;
+}
+
+.company__image {
+  position: absolute;
+  top: 30px;
+  right: 0;
+  width: 50%;
+}
+
+.company__image img {
+  width: 100%;
+  object-fit: cover;
 }
 
 /* フッター */
@@ -201,6 +245,10 @@ section + section {
   h1 {
     padding: 4%;
   }
+
+  .logo {
+    margin-left: 0;
+  }
   
   .header__box2 {
     display: none;
@@ -216,16 +264,31 @@ section + section {
     margin: 20px 0 0 0;
     border: none;
   }
-  
 
   /* ABOUT */
   .about__flex {
     flex-direction: column-reverse;
   }
 
+  .about__box1 {
+    margin: 0 auto;
+    width: 100%;
+    padding: 0;
+  }
+
+  .about__box2 {
+    margin: 0 calc(50% - 50vw);
+    width: 100vw;
+  }
+  
+  .about__text {
+    margin-top: 20px;
+  }
+
   /* BUSINESS */
   .business__flex {
     flex-direction: column;
+    padding: 0;
   }
 
   .business__img {
@@ -235,7 +298,31 @@ section + section {
   .business__box1, .business__box2 {
     margin: 0;
   }
+
+  /* COMPANY */
+  .company__wrapper {
+    flex-direction: column;
+    position: static;
+  }
+
+  .company__box {
+    padding: 50px 0 50px;
+    position: static;
+    width: 100%;
+  }
+
+  .company__table tr {
+    display: flex;
+    flex-direction: column;
+  }
   
+  .company__image {
+    position: static;
+    width: 100%;
+  }
+  
+  
+
 
   /* フッター */
   .footer__flex {
