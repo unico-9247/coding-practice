@@ -21,6 +21,7 @@
 
 .header__nav-menu li {
   margin-left: 4vw;
+  text-transform: uppercase;
 }
 
 .header__contact {
