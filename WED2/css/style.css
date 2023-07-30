@@ -31,14 +31,14 @@
 }
 
 /* mainvisual */
-/* 画面が広がらない */
-.mainvisual {
+.mainvisual img {
   width: 100vw;
+  height: calc(100vh - 80px);
+  object-fit: cover;
 }
 
 /* news */
 /* うまく等分されない */
-
 .news__list {
   display: flex;
 }
@@ -77,9 +77,12 @@
   padding: 0 5%;
 }
 
-.about__image img {
+.about__image {
   width: 100%;
-  height: calc(100vh - 80px);
+}
+
+.about__image img {
+  height: 400px;
   object-fit: cover;
 }
 
