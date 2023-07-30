@@ -1,0 +1,184 @@
+/* header */
+.header__flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__inner-flex {
+  display: flex;
+  margin-left: 8vw;
+  align-items: center;
+}
+
+/* header,footer logo　共通 */
+.header__logo, .footer__logo {
+  width: 100px;
+}
+
+.header__nav-menu {
+  display: flex;
+}
+
+.header__nav-menu li {
+  margin-left: 4vw;
+}
+
+.header__contact {
+  font-size: 1.2rem;
+  background-color: #000000;
+  color: #FFFFFF;
+  padding: 20px 40px;
+}
+
+/* mainvisual */
+/* 画面が広がらない */
+.mainvisual {
+  margin: 0 calc(50% - 50vw);
+  width: 100vw;
+}
+
+
+/* business */
+/* business__flex内の要素を垂直に中央寄りにしたい */
+.business__flex {
+  display: flex;
+}
+
+.business__inner-left {
+  margin-top: 60px;
+}
+
+.business__inner-item {
+  position: relative;
+}
+
+.business__inner-item + .business__inner-item {
+  margin-top: 25px;
+}
+
+.business__inner-item img {
+  width: 70%;
+}
+
+.business__inner-title {
+  margin-left: 20px;
+}
+
+.business__inner-title::before {
+  content: "";
+  width: 8px;
+  height: 1.5px;
+  background-color: #000;
+  position: absolute;
+  top: 15px;
+  left: 0;
+}
+
+/* company */
+.company__info {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.company__info-item {
+  width: 15%;
+}
+
+.company__info-data {
+  width: 85%;
+}
+
+
+/* -------------------------------------------
+Company
+-------------------------------------------*/
+/*
+テキストと画像はpositionを使って配置
+子要素の「position: absolute;」で高さがなくなるため、
+「height: 750px;」を指定して高さを確保
+*/
+/* #company {
+  height: 750px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+#company .text {
+  width: 55%;
+  background-color: #fff;
+  padding: 100px 8% 100px 6%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#company .img {
+  width: 53%;
+  position: absolute;
+  top: 115px;
+  right: 0;
+}
+#company .img img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+#company .info {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+#company .info dt {
+  width: 20%;
+  margin-top: 10px;
+} */
+/*
+1つめのdtにはmargin-topを設定しない
+*/
+/* #company .info dt:first-of-type {
+  margin-top: 0;
+} */
+/* #company .info dd {
+  width: 80%;
+  margin-top: 10px;
+} */
+/*
+1つめのddにはmargin-topを設定しない
+*/
+/* #company .info dd:first-of-type {
+  margin-top: 0;
+}
+#company .info .add {
+  margin-left: 20%;
+} */
+
+/* footer */
+.footer__flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+/* レスポンシブ */
+@media screen and (max-width: 900px) {
+  /* header */
+  .header__inner-flex {
+    flex-direction: column;
+    margin-left: 0;
+    align-items: stretch;
+    padding: 20px 4vw;
+  }
+  
+  .header__contact {
+    display: none;
+  }
+
+  /* footer */
+  .footer__flex {
+    flex-direction: column;
+  }
+
+  .footer__contact-info, .footer__copyright {
+    margin-top: 20px;
+  }
+
+}

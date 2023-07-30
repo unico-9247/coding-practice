@@ -1,0 +1,27 @@
+/* 各セクション共通で使用 */
+.wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 50px 4%;
+}
+
+
+.section__title-container::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 1.5px;
+  background-color: #000000;
+  margin: 15px 0;
+}
+
+.section__title-en {
+  font-size: 3.6rem;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 1rem;
+}
+
+.section__title-ja {
+  font-weight: normal;
+}
