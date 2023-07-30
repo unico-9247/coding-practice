@@ -33,10 +33,52 @@
 /* mainvisual */
 /* 画面が広がらない */
 .mainvisual {
-  margin: 0 calc(50% - 50vw);
   width: 100vw;
 }
 
+/* news */
+.news__list {
+  display: flex;
+}
+
+.news__item {
+  width: 30%;
+}
+
+.news__item + .news__item {
+  margin-left: 4vw;
+}
+
+
+.news__mark {
+  background-color: #000;
+  color: #fff;
+  padding: 5px;
+  text-transform: uppercase;
+}
+
+
+/* about */
+/* 画面が2500pxくらいになると左右の要素が離れすぎる */
+#about {
+  display: flex;
+  flex-direction: row-reverse;
+  padding-top: 50px;
+}
+
+.about__box-left {
+  margin-top: 120px;
+  padding: 0 5%;
+}
+
+.about__image {
+  width: 100%;
+}
+
+.about__image img {
+  height: 400px;
+  object-fit: cover;
+}
 
 /* business */
 /* business__flex内の要素を垂直に中央寄りにしたい */
@@ -118,6 +160,10 @@
 }
 
 /* footer */
+.footer {
+  background-color: #fff;
+}
+
 .footer__flex {
   display: flex;
   justify-content: space-between;
@@ -137,6 +183,23 @@
   .header__contact {
     display: none;
   }
+
+  /* about */
+  #about {
+  flex-direction: column-reverse;
+  justify-content: flex-start;
+}
+
+.about__box-left {
+  margin-top: 0;
+  padding: 0 5%;
+}
+
+.about__image {
+  width: 100%;
+  height: 400px;
+}
+
 
   /* business */
   .business__flex {
